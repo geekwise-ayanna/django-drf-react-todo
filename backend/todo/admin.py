@@ -1,10 +1,8 @@
 from django.contrib import admin
-from .models import ToDo
+from .models import Todo
 
-class ToDoAdmin(admin.ModelAdmin):
+class TodoAdmin(admin.ModelAdmin):
     list_display = ('title', 'description', 'completed')
 
 # Register your models here.
-admin.site.register(ToDo, ToDoAdmin)
-
-    
+admin.site.register(Todo, TodoAdmin)
