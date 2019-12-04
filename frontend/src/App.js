@@ -20,7 +20,7 @@ class App extends Component {
     }
     refreshList = () => {
     axios
-        .get("http://localhost:8000/api/todos/")
+        .get("https://3000-a90f62a0-1860-4560-8b6d-e96bab332491.ws-us02.gitpod.io/api/todos/")
         .then(res => this.setState({ todoList: res.data }))
         .catch(err => console.log(err));
     };
@@ -91,17 +91,17 @@ class App extends Component {
     this.toggle();
     if (item.id) {
         axios
-        .put(`http://localhost:8000/api/todos/${item.id}/`, item)
+        .put(`https://3000-a90f62a0-1860-4560-8b6d-e96bab332491.ws-us02.gitpod.io/api/todos/${item.id}/`, item)
         .then(res => this.refreshList());
         return;
     }
     axios
-        .post("http://localhost:8000/api/todos/", item)
+        .post("https://3000-a90f62a0-1860-4560-8b6d-e96bab332491.ws-us02.gitpod.io/api/todos/", item)
         .then(res => this.refreshList());
     };
     handleDelete = item => {
     axios
-        .delete(`http://localhost:8000/api/todos/${item.id}`)
+        .delete(`https://3000-a90f62a0-1860-4560-8b6d-e96bab332491.ws-us02.gitpod.io/api/todos/${item.id}`)
         .then(res => this.refreshList());
     };
     createItem = () => {
