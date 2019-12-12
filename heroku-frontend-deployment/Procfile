@@ -1,1 +1,0 @@
-web: cd heroku-frontend-deployment && python manage.py migrate && gunicorn heroku-frontend-deployment.wsgi
